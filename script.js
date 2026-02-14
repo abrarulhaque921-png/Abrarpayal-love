@@ -20,7 +20,7 @@ function noClick() {
   const size = parseFloat(getComputedStyle(yesBtn).fontSize);
   yesBtn.style.fontSize = (size * 1.25) + "px";
 
-  bear.src = "https://i.imgur.com/7Xq8FJv.png";
+  bear.src = "sad-bear.png";
   bear.classList.add("sad");
   bear.classList.remove("happy");
 
@@ -40,7 +40,7 @@ function yesClick() {
   const bear = document.getElementById("bear");
   const happySound = document.getElementById("happySound");
 
-  bear.src = "https://i.imgur.com/QZ6K4Xq.png";
+  bear.src = "happy-bear.png";
   bear.classList.remove("sad");
   bear.classList.add("happy");
 
