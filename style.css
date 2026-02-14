@@ -30,19 +30,24 @@ body {
   color: white;
 }
 
-/* Moving stars */
-.stars {
+body::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("") repeat;
-  animation: moveStars 80s linear infinite;
-  opacity: 0.5;
+  inset: -50%;
+  background:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 40% 70%, white, transparent),
+    radial-gradient(1px 1px at 60% 20%, white, transparent),
+    radial-gradient(2px 2px at 80% 50%, white, transparent),
+    radial-gradient(1px 1px at 30% 80%, white, transparent);
+  opacity: 0.6;
+  animation: starMove 60s linear infinite;
+  z-index: 0;
 }
 
-@keyframes moveStars {
-  from { background-position: 0 0; }
-  to { background-position: 2000px 2000px; }
+@keyframes starMove {
+  from { transform: translate(0,0); }
+  to { transform: translate(-25%, -25%); }
 }
 
 .container {
